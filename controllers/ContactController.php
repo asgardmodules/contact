@@ -1,5 +1,5 @@
 <?php
-namespace Coxis\App\Contact\Controllers;
+namespace App\Contact\Controllers;
 
 class ContactController extends \Coxis\Core\Controller {
 	/**
