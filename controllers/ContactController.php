@@ -22,8 +22,8 @@ class ContactController extends \Coxis\Core\Controller {
 				}
 				$email = Email::create(Value::val('email'), $this->form->email->getValue(), 'Contact', $txt);
 				// if($this->form->photo->getValue()) {
-				// 	$name = Tools::get($this->form->photo->getValue(), 'name');
-				// 	$path = Tools::get($this->form->photo->getValue(), 'path');
+				// 	$name = Tools::array_get($this->form->photo->getValue(), 'name');
+				// 	$path = Tools::array_get($this->form->photo->getValue(), 'path');
 				// 	$email->addFile($path, $name);
 				// }
 				$email->send();
