@@ -1,7 +1,7 @@
 <?php
-namespace Coxis\Contact\Controllers;
+namespace Asgard\Contact\Controllers;
 
-class ContactController extends \Coxis\Core\Controller {
+class ContactController extends \Asgard\Core\Controller {
 	/**
 	@Route('contact')
 	*/
@@ -29,10 +29,10 @@ class ContactController extends \Coxis\Core\Controller {
 				$email->send();
 
 				$this->form->reset();
-				\Coxis\Core\App::get('flash')->addSuccess('Merci pour votre message.');
+				\Asgard\Core\App::get('flash')->addSuccess('Merci pour votre message.');
 			}
 			else {
-				\Coxis\Core\App::get('flash')->addError(Tools::flateArray($this->form->errors()));
+				\Asgard\Core\App::get('flash')->addError(Tools::flateArray($this->form->errors()));
 			}
 		}
 	}
