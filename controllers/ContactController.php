@@ -29,10 +29,10 @@ class ContactController extends \Coxis\Core\Controller {
 				$email->send();
 
 				$this->form->reset();
-				\Flash::addSuccess('Merci pour votre message.');
+				\Coxis\Core\App::get('flash')->addSuccess('Merci pour votre message.');
 			}
 			else {
-				\Flash::addError(Tools::flateArray($this->form->errors()));
+				\Coxis\Core\App::get('flash')->addError(Tools::flateArray($this->form->errors()));
 			}
 		}
 	}

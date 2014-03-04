@@ -21,7 +21,7 @@ textarea {
 
 <?php $form->open() ?>
 
-<?php \Flash::showAll() ?>
+<?php \Coxis\Core\App::get('flash')->showAll() ?>
 
 <?php echo $form->name->labelTag() ?> <?php echo $form->name->def() ?><br>
 <?php echo $form->email->labelTag() ?> <?php echo $form->email->def() ?><br>
